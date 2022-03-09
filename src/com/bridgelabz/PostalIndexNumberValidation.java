@@ -18,7 +18,7 @@ public class PostalIndexNumberValidation {
         /**
          * Regex to check valid pin code of India.
          */
-        String regex = "(?![a-zA-Z-!@#$%^&*()_+=<>?/])[1-9]{1}[0-9]{5}$";
+        String regex = "^(?![a-zA-Z-!@#$%^&*()_+=<>?/])[1-9]{1}[0-9]{5}$";
 
         /**
          * Compiling the ReGex
