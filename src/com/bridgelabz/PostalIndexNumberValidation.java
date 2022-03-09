@@ -1,7 +1,7 @@
 package com.bridgelabz;
 
 /**
- * Restrict pin Code for taking alphabets or special characters at end
+ * Make sure the pin code 400 088 is valid
  */
 
 import java.util.regex.Matcher;
@@ -18,7 +18,7 @@ public class PostalIndexNumberValidation {
         /**
          * Regex to check valid pin code of India.
          */
-        String regex = "^(?![a-zA-Z-!@#$%^&*()_+=<>?/])[1-9]{1}[0-9]{5}(?![a-zA-Z-!@#$%^&*()_+=<>?/])$";
+        String regex = "^[1-9]{1}[0-9]{2}\\s{0,1}[0-9]{3}$";
 
         /**
          * Compiling the ReGex
@@ -54,6 +54,7 @@ public class PostalIndexNumberValidation {
          * 1.Test Case for checking 400088
          * 2.Test Case for checking A400088
          * 3.Test Case for checking 400088B
+         * 4.Test Case for checking 400 088
          */
 
         /**
@@ -71,5 +72,10 @@ public class PostalIndexNumberValidation {
          */
         String pinCode3 = "400088B";
         System.out.println(pinCode3 + ": " + isValidPinCode(pinCode3));
+        /**
+         * 4.Test Case for checking 400 088
+         */
+        String pinCode4 = "400 088";
+        System.out.println(pinCode4 + ": " + isValidPinCode(pinCode4));
     }
 }
